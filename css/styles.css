@@ -1,0 +1,130 @@
+/* ========== 
+Variables
+========== */
+
+:root {
+  --clr-primary-01: hsl(185, 75%, 39%);
+  --clr-primary-02: hsl(229, 23%, 23%);
+  --clr-primary-03: hsl(227, 10%, 46%);
+  --clr-neutral-01: hsl(0, 0%, 59%);
+}
+
+/* ========== 
+Basic set-up
+========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.125rem;
+  text-align: center;
+  background: url('../images/bg-pattern-top.svg'),
+    url('../images/bg-pattern-bottom.svg'), var(--clr-primary-01);
+  background-repeat: no-repeat;
+  background-position: right calc(50vw + 15%) bottom calc(50vh - 15vw),
+    left calc(40vw + 25%) top calc(70vh - 10vw);
+}
+
+.container {
+  width: 85%;
+  max-width: 350px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ========== 
+Typography
+========== */
+
+.profile-card-name,
+.profile-card-stats {
+  font-weight: 700;
+  color: var(--clr-primary-02);
+  margin-bottom: 0.625em;
+}
+
+.profile-card-age,
+.profile-card-city,
+.profile-card-stats-text {
+  font-weight: 300;
+  color: var(--clr-primary-03);
+}
+
+.profile-card-city {
+  font-size: 0.875rem;
+}
+
+.profile-card-stats-text {
+  font-size: 0.625rem;
+  letter-spacing: 1.5px;
+}
+
+/* ========== 
+Layout
+========== */
+
+.profile-card-top {
+  border-radius: 15px 15px 0px 0px;
+  background: url('../images/bg-pattern-top');
+  width: 100%;
+}
+
+.profile-card-bottom {
+  background: #fff;
+  border-radius: 0px 0px 15px 15px;
+  width: 100%;
+}
+
+.profile-card-main {
+  padding-bottom: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.profile-card-image {
+  position: absolute;
+  top: 0;
+  width: 96px;
+  height: 96px;
+  border-radius: 100%;
+  border: 5px solid #fff;
+  transform: translateY(-50%);
+}
+
+.profile-card-persona {
+  margin-top: 3.5em;
+}
+
+.profile-card-secondary {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--clr-primary-03);
+  padding: 1.5em;
+}
+
+/* ========== 
+Footer (& frontendmentor styling 
+========== */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
